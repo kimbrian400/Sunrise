@@ -1,7 +1,11 @@
 package com.kimbrian.sunrise;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import com.firebase.ui.auth.AuthUI;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -15,10 +19,13 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.kimbrian.sunrise.fragments.homefragment;
 import com.kimbrian.sunrise.fragments.menufragment;
 import com.kimbrian.sunrise.fragments.overviewfragment;
 import com.kimbrian.sunrise.fragments.reviewfragment;
+import com.kimbrian.sunrise.settings.SettingsActivity;
+import com.kimbrian.sunrise.ui.LoginActivity;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -35,11 +42,15 @@ public class MainActivity extends AppCompatActivity
 
     private FrameLayout host;
     private BottomNavigationView bottomNavigationView;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Sign Out
+        FirebaseAuth.getInstance().signOut();
 
         //toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -118,6 +129,14 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    private void logout(){
+        FirebaseAuth.getInstance().signOut();
+
+        Intent signout = new Intent(getApplicationContext(), LoginActivity.class);
+        signout.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(signout);
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -127,8 +146,15 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent settingsmse = new Intent(getApplicationContext(), SettingsActivity.class);
+            startActivity(settingsmse);
             return true;
         }
+        if (id == R.id.action_logout) {
+            logout();
+            //return true;
+        }
+
 
         return super.onOptionsItemSelected(item);
     }
@@ -141,9 +167,9 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_home) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_profile) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_about_us) {
 
         } else if (id == R.id.nav_tools) {
 
