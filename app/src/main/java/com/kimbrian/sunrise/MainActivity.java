@@ -2,34 +2,51 @@ package com.kimbrian.sunrise;
 
 import android.os.Bundle;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import android.view.View;
 
+import androidx.annotation.NonNull;
 import androidx.core.view.GravityCompat;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 
 import android.view.MenuItem;
 
 import com.google.android.material.navigation.NavigationView;
+import com.kimbrian.sunrise.fragments.homefragment;
+import com.kimbrian.sunrise.fragments.menufragment;
+import com.kimbrian.sunrise.fragments.overviewfragment;
+import com.kimbrian.sunrise.fragments.reviewfragment;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.view.Menu;
+import android.widget.FrameLayout;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private FrameLayout host;
+    private BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        /**
+        //FAB
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +55,9 @@ public class MainActivity extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });
+        **/
+
+        //Nav Drawer
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -45,7 +65,41 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+        host = findViewById(R.id.fragmenthost);
+        bottomNavigationView = findViewById(R.id.bottommenu);
+
+        changeFrag(new homefragment(),"Home");
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()){
+                    case R.id.overview_menuitem:
+                        changeFrag(new overviewfragment(),"Overview");
+                        break;
+                    case R.id.menu_menuitem:
+                        changeFrag(new menufragment(),"Menu");
+                        break;
+                    case R.id.review_menuitem:
+                        changeFrag(new reviewfragment(),"Review");
+                        break;
+                    default:
+                        changeFrag(new homefragment(),"Home");
+                }
+                return true;
+            }
+        });
+
     }
+
+    public void changeFrag(Fragment fragment, String tag){
+        FragmentManager fm = getSupportFragmentManager();
+        fm.beginTransaction().replace(R.id.fragmenthost,fragment)
+                .addToBackStack(tag)
+                .commit();
+    }
+
 
     @Override
     public void onBackPressed() {
