@@ -6,77 +6,400 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <!--   ListView    -->
-
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_small"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="@dimen/margin_normal"
-            android:contentDescription="@null"
-            app:srcCompat="@drawable/ic_add_description"
-            tools:ignore="RtlCompat,VectorDrawableCompat" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/linear1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/margin_small"
-            android:layout_marginStart="@dimen/margin_normal"
-            android:orientation="vertical"
-            tools:ignore="RtlCompat">
+            android:layout_marginTop="@dimen/margin_small"
+            android:orientation="horizontal">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:text="Open and Closing hours"
-                    android:id="@+id/name_of_book_tv"
-                    style="@style/rowHeader"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    tools:ignore="RtlCompat">
-
-                </LinearLayout>
-
-            </RelativeLayout>
-
-            <TextView
-                android:text="From 7Am to 10Pm"
-                android:id="@+id/author_of_book_tv"
-                style="@style/rowLabelBody"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:layout_marginTop="@dimen/margin_small" />
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/ic_add_description"
+                tools:ignore="RtlCompat,VectorDrawableCompat" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp">
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:orientation="vertical"
+                tools:ignore="RtlCompat">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Open and Closing hours"
+                        android:id="@+id/name_of_book_tv"
+                        style="@style/rowHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        tools:ignore="RtlCompat">
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:text="From 7Am to 10Pm"
+                    android:id="@+id/author_of_book_tv"
+                    style="@style/rowLabelBody"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="@dimen/margin_small" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp">
+
+                </LinearLayout>
 
             </LinearLayout>
 
+            <View
+                android:layout_margin="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@android:color/darker_gray"/>
+
         </LinearLayout>
 
-        <View
-            android:layout_margin="12dp"
+
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_below="@id/linear1"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/darker_gray"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/ic_add_description"
+                tools:ignore="RtlCompat,VectorDrawableCompat" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:orientation="vertical"
+                tools:ignore="RtlCompat">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Contact us"
+                        style="@style/rowHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        tools:ignore="RtlCompat">
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:text="Make sure to populate this"
+                    style="@style/rowLabelBody"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="@dimen/margin_small" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp">
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_margin="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@android:color/darker_gray"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linear3"
+            android:layout_below="@id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/ic_add_description"
+                tools:ignore="RtlCompat,VectorDrawableCompat" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:orientation="vertical"
+                tools:ignore="RtlCompat">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Where we are located"
+                        android:id="@+id/location"
+                        style="@style/rowHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        tools:ignore="RtlCompat">
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:text="We are located in Juja town, sunrise street"
+                    style="@style/rowLabelBody"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="@dimen/margin_small" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp">
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_margin="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@android:color/darker_gray"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linear4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/ic_add_description"
+                tools:ignore="RtlCompat,VectorDrawableCompat" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:orientation="vertical"
+                tools:ignore="RtlCompat">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Share location"
+                        style="@style/rowHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        tools:ignore="RtlCompat">
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:text="Click the button below to share your location"
+                    style="@style/rowLabelBody"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="@dimen/margin_small" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp">
+
+                    <Button
+                        android:id="@+id/share_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:text="@string/share"
+                        android:background="@drawable/bg_blue_button"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textStyle="normal"
+                        android:typeface="normal"
+                        android:layout_marginRight="10dp"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_margin="12dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@android:color/darker_gray"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linear5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/ic_add_description"
+                tools:ignore="RtlCompat,VectorDrawableCompat" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:orientation="vertical"
+                tools:ignore="RtlCompat">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Direction"
+                        android:id="@+id/direction"
+                        style="@style/rowHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        tools:ignore="RtlCompat">
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:text="Click the button below to..."
+                    style="@style/rowLabelBody"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="@dimen/margin_small" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp">
+
+                    <Button
+                        android:id="@+id/btn_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:text="@string/locate"
+                        android:background="@drawable/bg_blue_button"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textStyle="normal"
+                        android:typeface="normal"
+                        android:layout_marginRight="10dp"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_margin="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
+
+        </LinearLayout>
+
 
     </LinearLayout>
 

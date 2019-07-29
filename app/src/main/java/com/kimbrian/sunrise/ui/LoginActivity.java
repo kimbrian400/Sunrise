@@ -48,6 +48,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         //get firebase auth instance
         mAuth = FirebaseAuth.getInstance();
+
+        //firebaseAuth = FirebaseAuth.getInstance();
+
+
+
         FirebaseApp.initializeApp(this);
         FirebaseApp.initializeApp(LoginActivity.this);
 
@@ -80,6 +85,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     /**
      * Checks if user is logged in
      */
+
+
 
     private void isUserLogin() {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
