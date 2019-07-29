@@ -12,8 +12,21 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
+            android:name=".ui.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kimbrian.sunrise.MainActivity" />
+        </activity>
+        <activity
             android:name=".settings.SettingsActivity"
-            android:label="@string/title_activity_settings"></activity>
+            android:label="@string/title_activity_settings">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kimbrian.sunrise.MainActivity" />
+        </activity>
         <activity android:name=".ui.ResetPasswordActivity" />
         <activity android:name=".ui.SignupActivity" />
         <activity android:name=".ui.LoginActivity">

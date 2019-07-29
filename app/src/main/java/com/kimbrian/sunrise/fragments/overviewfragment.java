@@ -80,8 +80,8 @@ public class overviewfragment extends Fragment {
     }
 
     private void initView(View view) {
-        ListView list = view.findViewById(R.id.directionlist);
-        list.setAdapter(new ListAdapter());
+       // ListView list = view.findViewById(R.id.directionlist);
+        //list.setAdapter(new ListAdapter());
     }
 
     // TODO: Rename method, update argument and hook method into UI event

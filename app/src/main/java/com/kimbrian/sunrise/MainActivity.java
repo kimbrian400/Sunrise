@@ -25,6 +25,7 @@ import com.kimbrian.sunrise.fragments.menufragment;
 import com.kimbrian.sunrise.fragments.overviewfragment;
 import com.kimbrian.sunrise.fragments.reviewfragment;
 import com.kimbrian.sunrise.settings.SettingsActivity;
+import com.kimbrian.sunrise.ui.AboutActivity;
 import com.kimbrian.sunrise.ui.LoginActivity;
 
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -170,8 +171,12 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_profile) {
 
         } else if (id == R.id.nav_about_us) {
+            Intent about = new Intent(getApplicationContext(), AboutActivity.class);
+            startActivity(about);
 
         } else if (id == R.id.nav_tools) {
+            Intent settingsmse = new Intent(getApplicationContext(), SettingsActivity.class);
+            startActivity(settingsmse);
 
         } else if (id == R.id.nav_share) {
 
