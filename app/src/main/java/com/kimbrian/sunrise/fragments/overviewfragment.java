@@ -1,6 +1,7 @@
 package com.kimbrian.sunrise.fragments;
 
-import android.content.Context;
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -10,13 +11,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ListView;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.kimbrian.sunrise.R;
+import com.kimbrian.sunrise.map.MapActivity;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.firebase.ui.auth.AuthUI.getApplicationContext;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -26,7 +30,10 @@ import java.util.List;
  * Use the {@link overviewfragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class overviewfragment extends Fragment {
+public class overviewfragment extends Fragment implements View.OnClickListener {
+
+    private Button btn_location;
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -76,6 +83,16 @@ public class overviewfragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_overviewfragment, container, false);
         initView(view);
+
+        btn_location = (Button) view.findViewById(R.id.btn_location);
+        btn_location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                @SuppressLint("RestrictedApi") Intent about = new Intent(getApplicationContext(), MapActivity.class);
+                startActivity(about);
+            }
+        });
+
         return view;
     }
 
@@ -97,6 +114,13 @@ public class overviewfragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void onClick(View view) {
+
+
+
     }
 
     /**

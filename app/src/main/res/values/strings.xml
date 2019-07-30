@@ -140,5 +140,6 @@
     <string name="delete">Delete</string>
     <string name="share">Share Location</string>
     <string name="locate">Location</string>
+    <string name="title_activity_map">Map</string>
 
 </resources>
