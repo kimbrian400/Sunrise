@@ -131,7 +131,7 @@
                 </RelativeLayout>
 
                 <TextView
-                    android:text="Make sure to populate this"
+                    android:text="0728 094 604"
                     style="@style/rowLabelBody"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -204,7 +204,7 @@
                 </RelativeLayout>
 
                 <TextView
-                    android:text="We are located in Juja town, sunrise street"
+                    android:text="We are located in Juja town,Sunrise street"
                     style="@style/rowLabelBody"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
