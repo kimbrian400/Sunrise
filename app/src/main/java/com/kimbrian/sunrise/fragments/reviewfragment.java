@@ -74,10 +74,10 @@ public class reviewfragment extends Fragment {
         }
 
         //declaring and initializing our views
-        RatingBar mRatingBar = findViewById(R.id.ratingBar);
-        TextView mRatingScale = findViewById(R.id.tvRatingScale);
-        EditText mFeedback = findViewById(R.id.etFeedback);
-        Button mSendFeedback = findViewById(R.id.btnSubmit);
+        //RatingBar mRatingBar = findViewById(R.id.ratingBar);
+        //TextView mRatingScale = findViewById(R.id.tvRatingScale);
+        //EditText mFeedback = findViewById(R.id.etFeedback);
+        //Button mSendFeedback = findViewById(R.id.btnSubmit);
     }
 
     @Override
