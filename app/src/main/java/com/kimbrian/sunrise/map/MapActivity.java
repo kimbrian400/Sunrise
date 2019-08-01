@@ -22,7 +22,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
     private GoogleMap mMap;
     private LatLng where;
     private int MY_REQUEST_INT=9090;
-    private LatLng Sunrise;
+    private LatLng Sunrise_Gate_B, Gate_C;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,7 +74,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
             mMap.animateCamera(CameraUpdateFactory.zoomTo((float) 14.0));
         }
         //-1.0956907,37.0173973 sunrise hotel gate b
-        //
+        //-1.10053047,37.01239794 sunrise hotel gate c
         if (mMap != null) {
             mMap.setOnMyLocationChangeListener(new GoogleMap.OnMyLocationChangeListener() {
 
@@ -82,8 +82,13 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
                 public void onMyLocationChange(Location LatLng) {
                     // TODO Auto-generated method stub
                     where = new LatLng(-1.0956907,37.0173973);
-                    mMap.addMarker(new MarkerOptions().position(Sunrise).title("Sunrise Restaurant"));
-                    mMap.moveCamera(CameraUpdateFactory.newLatLng(Sunrise));
+                    mMap.addMarker(new MarkerOptions().position(Sunrise_Gate_B).title("Sunrise Restaurant Gate B"));
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(Sunrise_Gate_B));
+
+
+//                    where = new LatLng(-1.10053047,37.01239794);
+//                    mMap.addMarker(new MarkerOptions().position(Gate_C).title("Sunrise Restaurant Gate C"));
+//                    mMap.moveCamera(CameraUpdateFactory.newLatLng(Gate_C));
 
                 }
             });

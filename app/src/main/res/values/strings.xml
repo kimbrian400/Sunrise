@@ -48,8 +48,14 @@
     <string name="action_logout">Log Out</string>
     <string name="title_activity_about">About Us</string>
     <string name="large_text">
-        "Material is the metaphor.\n\n"
-        Sunrise Restaurant is one that is dedicated to providing , tasty and affordable dishes in Juja.
+        "Healthy Living.\n\n"
+        Sunrise Restaurant is one that is dedicated to providing ,tasty and affordable dishes in Juja.
+        Sunrise is a mobile platform that puts the local dining scene in the palm of your hand. \n\n
+        Our Mobile app enable users to browse, discover and get access to a variety of dishes . \n\n
+        Users can search for restaurants based on location and get comprehensive information including
+        contact details, menus, maps, opening hours, photos, reviews and much more.
+
+
     </string>
     <string name="edit">Edit</string>
     <string name="delete">Delete</string>
