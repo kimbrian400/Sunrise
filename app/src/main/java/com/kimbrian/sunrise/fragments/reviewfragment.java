@@ -32,11 +32,7 @@ public class reviewfragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    //declaring and initializing our views
-//    RatingBar mRatingBar = findViewById(R.id.ratingBar);
-//    TextView mRatingScale = findViewById(R.id.tvRatingScale);
-//    EditText mFeedback = findViewById(R.id.etFeedback);
-//    Button mSendFeedback = findViewById(R.id.btnSubmit);
+
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -76,6 +72,12 @@ public class reviewfragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+        //declaring and initializing our views
+        RatingBar mRatingBar = findViewById(R.id.ratingBar);
+        TextView mRatingScale = findViewById(R.id.tvRatingScale);
+        EditText mFeedback = findViewById(R.id.etFeedback);
+        Button mSendFeedback = findViewById(R.id.btnSubmit);
     }
 
     @Override
