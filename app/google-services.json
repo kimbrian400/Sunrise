@@ -1,79 +1,42 @@
 {
   "project_info": {
-    "project_number": "40080295503",
-    "firebase_url": "https://sunriseres-5e2da.firebaseio.com",
-    "project_id": "sunriseres-5e2da",
-    "storage_bucket": "sunriseres-5e2da.appspot.com"
+    "project_number": "805799939838",
+    "firebase_url": "https://sunrise-34ded.firebaseio.com",
+    "project_id": "sunrise-34ded",
+    "storage_bucket": "sunrise-34ded.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:40080295503:android:696a70e2f722731d",
-        "android_client_info": {
-          "package_name": "com.example.sunriseres"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "40080295503-ousl630i0g5v1j788bjuv5rgc0jcfjvr.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.sunriseres",
-            "certificate_hash": "77d1565e214de64e42de1ffd90353a5e61f190f1"
-          }
-        },
-        {
-          "client_id": "40080295503-9urie9i40uuvce76e46lfvoivuog3i6f.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBNufZx3wefrAdCYzxHVqB2XISMr4P84LQ"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "40080295503-9urie9i40uuvce76e46lfvoivuog3i6f.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:40080295503:android:fdb707582abcb94b",
+        "mobilesdk_app_id": "1:805799939838:android:fdb707582abcb94b",
         "android_client_info": {
           "package_name": "com.kimbrian.sunrise"
         }
       },
       "oauth_client": [
         {
-          "client_id": "40080295503-d9hsrmb7hrbtnmdlldqnr8tbb35utnku.apps.googleusercontent.com",
+          "client_id": "805799939838-525oi0kbc2th11h3td115t420vmtqo6g.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.kimbrian.sunrise",
-            "certificate_hash": "77d1565e214de64e42de1ffd90353a5e61f190f1"
+            "certificate_hash": "f44d93b55d8169fcacc4a7b2c3b1fd423404c09f"
           }
         },
         {
-          "client_id": "40080295503-9urie9i40uuvce76e46lfvoivuog3i6f.apps.googleusercontent.com",
+          "client_id": "805799939838-p611fejrrr4limrstnn3js3tbt24stpa.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBNufZx3wefrAdCYzxHVqB2XISMr4P84LQ"
+          "current_key": "AIzaSyB4t-9VjYZDR_w4roRbM4qsnBYv63UCvsU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "40080295503-9urie9i40uuvce76e46lfvoivuog3i6f.apps.googleusercontent.com",
+              "client_id": "805799939838-p611fejrrr4limrstnn3js3tbt24stpa.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
