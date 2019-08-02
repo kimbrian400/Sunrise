@@ -32,6 +32,11 @@ public class reviewfragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+//    RatingBar ratingBar;
+//    TextView RatingScale;
+//    EditText etFeedback;
+//    Button btnSubmit;
+
 
 
     // TODO: Rename and change types of parameters
@@ -73,18 +78,23 @@ public class reviewfragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
-        //declaring and initializing our views
-        //RatingBar mRatingBar = findViewById(R.id.ratingBar);
-        //TextView mRatingScale = findViewById(R.id.tvRatingScale);
-        //EditText mFeedback = findViewById(R.id.etFeedback);
-        //Button mSendFeedback = findViewById(R.id.btnSubmit);
+
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_reviewfragment, container, false);
+        View view = inflater.inflate(R.layout.fragment_reviewfragment, container, false);
+
+//        ratingBar = getView().findViewById(R.id.ratingBar);
+//        addListenerOnRatingBar(ratingBar);
+//        RatingScale = getView().findViewById(R.id.tvRatingScale);
+//        etFeedback = getView().findViewById(R.id.etFeedback);
+//        btnSubmit = getView().findViewById(R.id.btnSubmit);
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -116,41 +126,47 @@ public class reviewfragment extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
-    /**mRatingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-        @Override
-        public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
-            mRatingScale.setText(String.valueOf(v));
-            switch ((int) ratingBar.getRating()) {
-                case 1:
-                    mRatingScale.setText("Very bad");
-                    break;
-                case 2:
-                    mRatingScale.setText("Need some improvement");
-                    break;
-                case 3:
-                    mRatingScale.setText("Good");
-                    break;
-                case 4:
-                    mRatingScale.setText("Great");
-                    break;
-                case 5:
-                    mRatingScale.setText("Awesome. I love it");
-                    break;
-                default:
-                    mRatingScale.setText("");
-            }
-        }
-    });
-    mSendFeedback.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            if (mFeedback.getText().toString().isEmpty()) {
-                Toast.makeText(MainActivity.this, "Please fill in feedback text box", Toast.LENGTH_LONG).show();
-            } else {
-                mFeedback.setText("");
-                mRatingBar.setRating(0);
-                Toast.makeText(MainActivity.this, "Thank you for sharing your feedback", Toast.LENGTH_SHORT).show();
-            }
-        }
-    });**/
+
+//    public void addListenerOnRatingBar(View v) {
+//
+//        ratingBar = v.findViewById(R.id.ratingBar);
+//    ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+//        @Override
+//        public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
+//            RatingScale.setText(String.valueOf(v));
+//            switch ((int) ratingBar.getRating()) {
+//                case 1:
+//                    RatingScale.setText("Very bad");
+//                    break;
+//                case 2:
+//                    RatingScale.setText("Need some improvement");
+//                    break;
+//                case 3:
+//                    RatingScale.setText("Good");
+//                    break;
+//                case 4:
+//                    RatingScale.setText("Great");
+//                    break;
+//                case 5:
+//                    RatingScale.setText("Awesome. I love it");
+//                    break;
+//                default:
+//                    RatingScale.setText("");
+//            }
+//        }
+//    });
+//
+//    etFeedback.setOnClickListener(new View.OnClickListener() {
+//        @Override
+//        public void onClick(View view) {
+//            if (etFeedback.getText().toString().isEmpty()) {
+//                Toast.makeText(getContext(), "Please fill in feedback text box", Toast.LENGTH_LONG).show();
+//            } else {
+//                etFeedback.setText("");
+//                ratingBar.setRating(0);
+//                Toast.makeText(getContext(), "Thank you for sharing your feedback", Toast.LENGTH_SHORT).show();
+//            }
+//       }
+//   });
+    //}
 }

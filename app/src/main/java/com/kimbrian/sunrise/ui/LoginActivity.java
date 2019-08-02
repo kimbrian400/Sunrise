@@ -34,10 +34,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private Intent HomeActivity;
     private ImageView loginPhoto;
     private TextView createAccount;
+    private TextView textforgot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        isUserLogin();
         setContentView(R.layout.activity_login);
 
         createAccount = findViewById(R.id.btnSignup);
@@ -48,6 +50,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mAuth = FirebaseAuth.getInstance();
         HomeActivity = new Intent(this, com.kimbrian.sunrise.MainActivity.class);
 
+        textforgot = findViewById(R.id.textforgot);
+
+        textforgot.setOnClickListener(this);
+
         createAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,6 +62,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 finish();
             }
         });
+
+
 
         loginProgress.setVisibility(View.INVISIBLE);
         btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -78,6 +86,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             }
         });
 
+    }
+
+    /**
+     * Checks if user is logged in
+     */
+    private void isUserLogin() {
+        FirebaseUser user  = FirebaseAuth.getInstance().getCurrentUser();
+        if(user!=null){
+            startActivity(  new Intent(LoginActivity.this, MainActivity.class));
+            finish();
+        }
     }
 
     private void signIn(String mail, String password) {
@@ -123,7 +142,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View view) {
-
+        if(view == textforgot){
+            finish();
+            startActivity(new Intent(this, ResetPasswordActivity.class));
+        }
     }
 }
 

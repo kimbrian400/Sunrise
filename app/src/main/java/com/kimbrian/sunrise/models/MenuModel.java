@@ -5,6 +5,15 @@ public class MenuModel {
     public String dish;
     public String price;
 
+    public MenuModel(){
+
+    }
+
+    public MenuModel(String dish, String price){
+        this.dish = dish;
+        this.price = price;
+    }
+
     public String getDish() {
         return dish;
     }

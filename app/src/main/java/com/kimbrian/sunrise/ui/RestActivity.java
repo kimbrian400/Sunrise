@@ -81,12 +81,12 @@ public class RestActivity extends AppCompatActivity {
                 for (DataSnapshot userSnapshot : dataSnapshot.getChildren())
                 {
                     String dish = userSnapshot.getKey();
-                    String dishprice = userSnapshot.getValue().toString();
+                    String price = userSnapshot.getValue().toString();
 
                     MenuModel listdata = new MenuModel();
 
                     listdata.setDish(dish);
-                    listdata.setPrice(dishprice);
+                    listdata.setPrice(price);
                     list.add(listdata);
 
                 }

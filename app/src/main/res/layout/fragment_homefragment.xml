@@ -28,6 +28,7 @@
             android:layout_height="0dp"
             android:columnOrderPreserved="true"
             android:columnCount="2"
+
             android:layout_weight="1">
 
             <androidx.cardview.widget.CardView
@@ -42,6 +43,7 @@
                     android:layout_width="177dp"
                     android:layout_height="180dp"
                     android:src="@drawable/githeri" />
+
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -68,8 +70,21 @@
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:src="@drawable/ugali"/>
+                    android:src="@drawable/beans"/>
             </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="185dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="50dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:paddingBottom="50dp">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/chapo"/>
+            </androidx.cardview.widget.CardView>
+
         </GridLayout>
 
     </LinearLayout>

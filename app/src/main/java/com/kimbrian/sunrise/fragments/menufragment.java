@@ -10,7 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.kimbrian.sunrise.R;
+import com.kimbrian.sunrise.models.MenuModel;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -29,6 +32,11 @@ public class menufragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+//    private FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
+//    private DatabaseReference mDatabaseReference = mDatabase.getReference();
+
+
 
     private OnFragmentInteractionListener mListener;
 
@@ -61,6 +69,14 @@ public class menufragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+//        mDatabaseReference = mDatabase.getReference().child("Dishes");
+//        mDatabaseReference.setValue("Chapati Dishes");
+//
+//        MenuModel menuModel = new MenuModel("chapati veges", "30");
+//        mDatabaseReference = mDatabase.getReference().child("menuModel");
+//        mDatabaseReference.setValue(menuModel);
+
     }
 
     @Override
